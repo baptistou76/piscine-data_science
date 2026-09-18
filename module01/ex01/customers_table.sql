@@ -18,3 +18,7 @@ UNION ALL
 SELECT *
 FROM data_2023_jan
 
+UNION ALL
+
+SELECT *
+FROM data_2023_feb
