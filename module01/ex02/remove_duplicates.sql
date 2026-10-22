@@ -1,7 +1,3 @@
--- Remove duplicate rows from customers
--- Two rows are duplicates when all columns except event_time
--- are identical and their timestamps differ by at most 1 second.
-
 CREATE TEMP TABLE customers_clean AS
 WITH ordered_events AS (
     SELECT
