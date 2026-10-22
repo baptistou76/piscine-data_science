@@ -15,13 +15,13 @@ FROM item
 GROUP BY product_id;
 
 -- 3. Ajouter les colonnes à customers si nécessaire
-ALTER TABLE customers
+ALTER TABLE customers_clean
     ADD COLUMN IF NOT EXISTS category_id BIGINT,
     ADD COLUMN IF NOT EXISTS category_code VARCHAR(255),
     ADD COLUMN IF NOT EXISTS brand VARCHAR(255);
 
 -- 4. Mettre à jour les lignes existantes de customers
-UPDATE customers AS c
+UPDATE customers_clean AS c
 SET
     category_id = i.category_id,
     category_code = i.category_code,
