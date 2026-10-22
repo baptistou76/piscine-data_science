@@ -122,8 +122,6 @@ axs[0].grid(
     zorder=-1
 )
 
-axs[0].set_axisbelow(True)
-
 
 # ============================================================
 # GRAPHIQUE 2
@@ -162,9 +160,9 @@ axs[1].grid(
        zorder=-1
 )
 
-axs[1].set_axisbelow(True)
-
-
+for ax in axs:
+    ax.yaxis.grid(True, linestyle='-', alpha=0.7)
+    ax.set_axisbelow(True)
 
 # ============================================================
 # AFFICHAGE
